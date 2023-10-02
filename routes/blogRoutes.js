@@ -4,12 +4,22 @@ let articalData = require("../ArticalsData.json");
 var fs = require("fs");
 
 router.get("/getAllBlogs", (req, res) => {
-  res.status(200).json({ message: "All Blogs" });
+  fs.readFile("ArticalsData.json", "utf8", function (err, data) {
+    let json = JSON.parse(data);
+    res.status(200).json({ json });
+  });
 });
 
-router.get("/singlepost", (req, res) => {
+router.get("/singlepost/:id", async (req, res) => {
+  const blogId = req.params.id;
   fs.readFile("ArticalsData.json", "utf8", function (err, data) {
-    res.status(200).json({ Artical: articalData });
+    let json = JSON.parse(data);
+    let arrayLen = json.length;
+    for (var i = 0; i < arrayLen; i++) {
+      if (json[i].BlogID === blogId) {
+        res.status(200).json({ blogdata: json[i] });
+      }
+    }
   });
 });
 
