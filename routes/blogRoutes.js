@@ -2,6 +2,7 @@ const express = require("express");
 const router = express.Router();
 let articalData = require("../ArticalsData.json");
 var fs = require("fs");
+const fsPromises = require("fs").promises;
 
 router.get("/getAllBlogs", (req, res) => {
   fs.readFile("ArticalsData.json", "utf8", function (err, data) {
@@ -24,15 +25,41 @@ router.get("/singlepost/:id", async (req, res) => {
 });
 
 router.post("/createBlog", (req, res) => {
-  const { ArticalData } = req.body;
-  fs.writeFile(
-    "ArticalsData.json",
-    `{"${"Artical"}":${JSON.stringify(ArticalData)}}`,
-    function (err) {
-      if (err) throw err;
-      res.status(200).json({ message: "Blogs Added" });
-    }
-  );
+  const { title, introduction, blogData } = req.body;
+  if (!title) {
+    res.status(400);
+    throw new Error("Please add blog title");
+  } else if (!introduction) {
+    res.status(400);
+    throw new Error("Please add introduction");
+  } else if (!blogData) {
+    res.status(400);
+    throw new Error("Please add your blog");
+  } else {
+    fsPromises.readFile("ArticalsData.json", "utf-8").then((data) => {
+      let json = JSON.parse(data);
+      json.push({
+        BlogID: `test0${json.length + 1}`,
+        title: `${title}`,
+        introduction: `${introduction}`,
+        blogData: `${blogData}`,
+      });
+      fsPromises
+        .writeFile("ArticalsData.json", JSON.stringify(json))
+        .then(() => {
+          res.status(200).json({
+            BlogID: `test0${json.length + 1 - 1}`,
+            title: `${title}`,
+            introduction: `${introduction}`,
+            blogData: `${blogData}`,
+          });
+        })
+        .catch((err) => {
+          res.status(400);
+          throw new Error("Append Failed: " + err);
+        });
+    });
+  }
 });
 
 module.exports = router;
