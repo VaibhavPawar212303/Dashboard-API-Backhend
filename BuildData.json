@@ -1,0 +1,46 @@
+[
+  {
+    "BuildID": "build01",
+    "ProjectName": "Clippd",
+    "ProjectID": "project01",
+    "status": "finished",
+    "totalSuites": 1,
+    "totalTests": 1,
+    "testPassed": 1,
+    "testFailed": 0,
+    "testSkipped": 0,
+    "buildStart_AT": "2023-10-14T17:31:28.812Z",
+    "buildEnd_AT": "2023-10-14T17:31:32.450Z",
+    "browserPath": "",
+    "browserName": "electron",
+    "browserVersion": "106.0.5249.51",
+    "osName": "win32",
+    "osVersion": "10.0.22621",
+    "cypressVersion": "12.17.3",
+    "Tests": [
+      "[{\"title\":[\"template spec\",\"passes\"],\"state\":\"passed\",\"body\":\"() => {\\n    cy.visit('https://example.cypress.io');\\n  }\",\"displayError\":null,\"attempts\":[{\"state\":\"passed\",\"error\":null,\"videoTimestamp\":6291,\"duration\":1146,\"startedAt\":\"2023-10-14T17:31:31.301Z\",\"screenshots\":[]}]}]"
+    ]
+  },
+  {
+    "BuildID": "build02",
+    "ProjectName": "Clippd",
+    "ProjectID": "project01",
+    "status": "finished",
+    "totalSuites": 1,
+    "totalTests": 1,
+    "testPassed": 1,
+    "testFailed": 0,
+    "testSkipped": 0,
+    "buildStart_AT": "2023-10-14T18:12:34.476Z",
+    "buildEnd_AT": "2023-10-14T18:12:41.996Z",
+    "browserPath": "",
+    "browserName": "electron",
+    "browserVersion": "106.0.5249.51",
+    "osName": "win32",
+    "osVersion": "10.0.22621",
+    "cypressVersion": "12.17.3",
+    "Tests": [
+      "[{\"title\":[\"template spec\",\"passes\"],\"state\":\"passed\",\"body\":\"() => {\\n    cy.visit('https://example.cypress.io');\\n  }\",\"displayError\":null,\"attempts\":[{\"state\":\"passed\",\"error\":null,\"videoTimestamp\":10427,\"duration\":2013,\"startedAt\":\"2023-10-14T18:12:39.976Z\",\"screenshots\":[]}]}]"
+    ]
+  }
+]

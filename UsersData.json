@@ -1,0 +1,26 @@
+[
+  {
+    "UserID": "user01",
+    "userName": "Vaibhav pawar",
+    "EmailId": "pawarvaibhav.vppv@gmail1.com",
+    "Password": "vsp212303",
+    "PhoneNo": "8208869181",
+    "City": "Pune"
+  },
+  {
+    "UserID": "user02",
+    "userName": "vaibhav2123",
+    "EmailId": "c",
+    "Password": "vsp212303",
+    "PhoneNo": "896987987",
+    "City": "pune"
+  },
+  {
+    "UserID": "user03",
+    "userName": "vsp212303",
+    "EmailId": "pawar@gmail.com",
+    "Password": "vsp212303",
+    "PhoneNo": "232423423",
+    "City": "nagar"
+  }
+]
