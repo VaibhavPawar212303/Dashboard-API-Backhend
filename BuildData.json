@@ -1,68 +1,62 @@
 [
   {
-    "BuildID": "build01",
-    "ProjectName": "Clippd",
-    "ProjectID": "project01",
-    "status": "finished",
-    "totalSuites": 1,
-    "totalTests": 1,
-    "testPassed": 1,
-    "testFailed": 0,
-    "testSkipped": 0,
-    "buildStart_AT": "2023-10-14T17:31:28.812Z",
-    "buildEnd_AT": "2023-10-14T17:31:32.450Z",
-    "browserPath": "",
-    "browserName": "electron",
-    "browserVersion": "106.0.5249.51",
-    "osName": "win32",
-    "osVersion": "10.0.22621",
-    "cypressVersion": "12.17.3",
-    "Tests": [
-      "[{\"title\":[\"template spec\",\"passes\"],\"state\":\"passed\",\"body\":\"() => {\\n    cy.visit('https://example.cypress.io');\\n  }\",\"displayError\":null,\"attempts\":[{\"state\":\"passed\",\"error\":null,\"videoTimestamp\":6291,\"duration\":1146,\"startedAt\":\"2023-10-14T17:31:31.301Z\",\"screenshots\":[]}]}]"
-    ]
-  },
-  {
-    "BuildID": "build02",
-    "ProjectName": "Clippd",
-    "ProjectID": "project01",
-    "status": "finished",
-    "totalSuites": 1,
-    "totalTests": 1,
-    "testPassed": 1,
-    "testFailed": 0,
-    "testSkipped": 0,
-    "buildStart_AT": "2023-10-14T18:12:34.476Z",
-    "buildEnd_AT": "2023-10-14T18:12:41.996Z",
-    "browserPath": "",
-    "browserName": "electron",
-    "browserVersion": "106.0.5249.51",
-    "osName": "win32",
-    "osVersion": "10.0.22621",
-    "cypressVersion": "12.17.3",
-    "Tests": [
-      "[{\"title\":[\"template spec\",\"passes\"],\"state\":\"passed\",\"body\":\"() => {\\n    cy.visit('https://example.cypress.io');\\n  }\",\"displayError\":null,\"attempts\":[{\"state\":\"passed\",\"error\":null,\"videoTimestamp\":10427,\"duration\":2013,\"startedAt\":\"2023-10-14T18:12:39.976Z\",\"screenshots\":[]}]}]"
-    ]
-  },
-  {
-    "BuildID": "build03",
-    "ProjectName": "Clippd",
-    "ProjectID": "project01",
-    "status": "finished",
-    "totalSuites": 1,
-    "totalTests": 1,
-    "testPassed": 1,
-    "testFailed": 0,
-    "testSkipped": 0,
-    "buildStart_AT": "2023-10-19T02:07:04.403Z",
-    "buildEnd_AT": "2023-10-19T02:07:08.412Z",
-    "browserPath": "",
-    "browserName": "electron",
-    "browserVersion": "106.0.5249.51",
-    "osName": "win32",
-    "osVersion": "10.0.22621",
-    "cypressVersion": "12.17.3",
-    "Tests": [
-      "[{\"title\":[\"template spec\",\"passes\"],\"state\":\"passed\",\"body\":\"() => {\\n    cy.visit('https://example.cypress.io');\\n  }\",\"displayError\":null,\"attempts\":[{\"state\":\"passed\",\"error\":null,\"videoTimestamp\":6669,\"duration\":1379,\"startedAt\":\"2023-10-19T02:07:07.026Z\",\"screenshots\":[]}]}]"
-    ]
+    "project_id": 2,
+    "project_type": "Postman-API-Test",
+    "BuildData": {
+      "buildName": "Blog Routs",
+      "buildStatus": "pass",
+      "tests": [
+        {
+          "testid": "ffa3c3b2-a988-42d4-8cb9-c670879668d0",
+          "testname": "https://postman-test-8v7a.onrender.com/api/user",
+          "testMethod": "GET",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "e7db8de4-d09d-4b83-8e8d-c047a9072d7c",
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"Validate response user message incorrect\", function () {\r",
+                  "              var jsonData = pm.response.json();\r",
+                  "              var dataLength = jsonData.message;\r",
+                  "              console.log(dataLength);\r",
+                  "              pm.expect(dataLength).to.eql(\"All User Data\")\r",
+                  "              });"
+                ],
+                "_lastExecutionId": "1aa39c6f-eee7-4104-b57f-fd5127339695"
+              }
+            }
+          ],
+          "assertions": [
+            {
+              "assertion": "Validate response user message incorrect",
+              "skipped": false
+            }
+          ],
+          "totalAssertion": 1,
+          "totalAssertionPass": 1,
+          "totalAssertionFail": 0,
+          "testStatus": "pass"
+        }
+      ],
+      "runStats": {
+        "iterations": { "total": 1, "pending": 0, "failed": 0 },
+        "items": { "total": 1, "pending": 0, "failed": 0 },
+        "scripts": { "total": 1, "pending": 0, "failed": 0 },
+        "prerequests": { "total": 1, "pending": 0, "failed": 0 },
+        "requests": { "total": 1, "pending": 0, "failed": 0 },
+        "tests": { "total": 1, "pending": 0, "failed": 0 },
+        "assertions": { "total": 1, "pending": 0, "failed": 0 },
+        "testScripts": { "total": 1, "pending": 0, "failed": 0 },
+        "prerequestScripts": { "total": 0, "pending": 0, "failed": 0 }
+      },
+      "totalRequestMade": 1,
+      "totalAssertion": 1,
+      "totalPassAssertion": 1,
+      "totalFailAssertion": 0,
+      "buildStartedAt": 1698568636123,
+      "buildendAt": 1698568638150
+    }
   }
 ]
