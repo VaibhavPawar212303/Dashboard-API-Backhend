@@ -1,4 +1,5 @@
-const sql = require("../config/db");
+const client = require("../config/db");
+
 const createProject = async (req, res) => {
   const { user_id, Project_Name, Project_Desc, Project_Type, Project_ID } =
     req.body;
@@ -24,7 +25,7 @@ const getProject = async (req, res) => {
   try {
     var query = `SELECT * FROM projectdata 
    WHERE user_id = '${userID}';`;
-    sql.client.query(query, function (err, result) {
+    client.query(query, function (err, result) {
       if (err) throw err;
       res.status(200).json({ projects: result.rows });
     });

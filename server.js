@@ -21,11 +21,11 @@ app.use(
   })
 );
 
-app.use("/api/", require("./routes/blogRoutes"));
+//app.use("/api/", require("./routes/blogRoutes"));
 app.use("/api/user", require("./routes/userRoutes"));
 app.use("/api/project", require("./routes/projectRoutes"));
 app.use("/api/build", require("./routes/buildRoutes"));
-app.use("/api/test", require("./routes/testRoutes"));
+
 app.listen(PORT, () => {
   console.log(`App Is Listening On Port ${PORT}`);
 });
