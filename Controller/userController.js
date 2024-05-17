@@ -9,9 +9,9 @@ const loginUser = async (req, res) => {
     res.status(200).json({ message: "Please Add Password" });
   } else {
     try {
-      var query = `SELECT * FROM userdata 
-           WHERE email = '${EmailId}';`;
-      client  .query(query, function (err, result) {
+      var query = `SELECT * FROM userdata WHERE email = '${EmailId}';`;
+      
+      client.query(query, function (err, result) {
         if (err) throw err;
         const password = result.rows[0].password;
         if (Password === password) {
@@ -25,12 +25,10 @@ const loginUser = async (req, res) => {
     }
   }
 };
-
 //JWT Token Creation
 const generateToken = (id) => {
   return jwt.sign({ id }, process.env.JWT_SECRET, {
     expiresIn: "30d",
   });
 };
-
 module.exports = { loginUser };
