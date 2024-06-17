@@ -49,4 +49,8 @@ router.post("/createUser", (req, res) => {
 
 router.post("/loginUser", loginUser);
 
+router.get("/docker", (req, res) => {
+  res.status(200).json({ message: "Hi From Docker" });
+});
+
 module.exports = router;
